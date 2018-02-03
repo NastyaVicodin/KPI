@@ -1,0 +1,30 @@
+.ad-blocking-advisor-wrapper {
+	position:relative;
+	margin-bottom:10px;
+	width:100%;
+	/* position:absolute; */
+	/* top:0; */
+	/* left:0; */
+}
+
+.aba-content {
+	padding:10px; 
+	margin:0 auto;
+	text-align:center;
+	max-width:1400px;
+}
+
+.aba-left {
+	float:left;
+	/* width:90%; */
+}
+
+.aba-right {
+	float:right;
+	cursor: pointer;
+	/* padding:3px 3px 0px 0px; */
+}
+
+.aba-right .dashicons {
+	font-size:25px;
+}
