@@ -1,3 +1,16 @@
+//################################################
+//
+//    #             
+//    #  #           Program: HeaderMaker
+//    #  #          
+//    ####   #       Author: Anastasia Lukyanenko
+//    #  ## ##      
+//    #  # # #       Created By HeaderMaker 
+//       #   #      
+//           #      
+//
+//################################################
+
 #include "header_maker.h"
 
 char	*prog_name;

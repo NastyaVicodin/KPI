@@ -1,3 +1,16 @@
+//################################################
+//
+//    #             
+//    #  #           Program: HeaderMaker
+//    #  #          
+//    ####   #       Author: Anastasia Lukyanenko
+//    #  ## ##      
+//    #  # # #       Created By HeaderMaker 
+//       #   #      
+//           #      
+//
+//################################################
+
 #include "header_maker.h"
 
 LRESULT CALLBACK DialogProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
@@ -85,7 +98,7 @@ LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 					
 					str_bord = (char *)malloc(sizeof(char) * 70);
 					str_space = (char *)malloc(sizeof(char) * 70);
-					while (j < 49)
+					while (j < 48)
 						str_bord[j++] = '#';
 					str_bord[j] = '\0';
 					j = 0;
@@ -100,32 +113,32 @@ LRESULT CALLBACK WindowProcedure(HWND hWnd, UINT msg, WPARAM wp, LPARAM lp)
 						if (i == 0 || i == 11)
 							strcat(header, str_bord);
 						if (i == 2)
-							strcat(header, "    #                     ");
+							strcat(header, "    #             ");
 						if (i == 3)
 						{
-							strcat(header, "    #    #                 ");
+							strcat(header, "    #  #          ");
 							strcat(header, " Program: ");
 							strcat(header, prog_name);
 						}
 						if (i == 4)
-							strcat(header, "    #    #                 ");
+							strcat(header, "    #  #          ");
 						if (i == 5)
 						{
-							strcat(header, "    ####      #         ");
+							strcat(header, "    ####   #      ");
 							strcat(header, " Author: ");
 							strcat(header, author);
 						}
 						if (i == 6)
-							strcat(header, "    #    ##  ##         ");
+							strcat(header, "    #  ## ##      ");
 						if (i == 7)
 						{
-							strcat(header, "    #    #  #  #         ");
+							strcat(header, "    #  # # #      ");
 							strcat(header, " Created By HeaderMaker ");
 						}
 						if (i == 8)
-							strcat(header, "          #      #         ");
+							strcat(header, "       #   #      ");
 						if (i == 9)
-							strcat(header, "                  #         ");
+							strcat(header, "           #      ");
 						strcat(header, "\r\n");
 						i++;
 					}

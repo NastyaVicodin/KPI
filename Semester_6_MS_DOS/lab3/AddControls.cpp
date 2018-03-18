@@ -1,3 +1,16 @@
+//################################################
+//
+//    #             
+//    #  #           Program: HeaderMaker
+//    #  #          
+//    ####   #       Author: Anastasia Lukyanenko
+//    #  ## ##      
+//    #  # # #       Created By HeaderMaker 
+//       #   #      
+//           #      
+//
+//################################################
+
 #include "header_maker.h"
 
 void	AddControls(HWND hWnd)
@@ -21,24 +34,24 @@ void	AddControls(HWND hWnd)
 	CreateWindowW(L"static", L"program_name:", WS_VISIBLE | WS_CHILD,
 		630, 90, 100, 30, hWnd, NULL, NULL, NULL);
 	hProg_name = CreateWindowW(L"edit", L"", WS_VISIBLE | WS_CHILD | WS_BORDER,
-		740, 90, 220, 20, hWnd, NULL, NULL, NULL);
+		740, 90, 250, 20, hWnd, NULL, NULL, NULL);
 
 	CreateWindowW(L"static", L"author name:", WS_VISIBLE | WS_CHILD,
 		630, 120, 100, 30, hWnd, NULL, NULL, NULL);
 	hAuthor = CreateWindowW(L"edit", L"", WS_VISIBLE | WS_CHILD | WS_BORDER,
-		740, 120, 220, 20, hWnd, NULL, NULL, NULL);
+		740, 120, 250, 20, hWnd, NULL, NULL, NULL);
 
 	CreateWindowW(L"static", L"comment type:", WS_VISIBLE | WS_CHILD,
-		630, 150, 220, 30, hWnd, NULL, NULL, NULL);
+		630, 150, 100, 30, hWnd, NULL, NULL, NULL);
 	hComment_type = CreateWindowW(L"edit", L"", WS_VISIBLE | WS_CHILD | WS_BORDER,
-		740, 150, 10, 20, hWnd, NULL, NULL, NULL);
+		740, 150, 13, 20, hWnd, NULL, NULL, NULL);
 
 	CreateWindowW(L"button", L"MAKE HEADER", WS_VISIBLE | WS_CHILD | WS_BORDER,
 		735, 180, 200, 30, hWnd, (HMENU)MAKE_HEADER, NULL, NULL);
 
-	hHeader = CreateWindowW(L"edit", L"", WS_VISIBLE | WS_CHILD | WS_BORDER,
-		630, 220, 400, 300, hWnd, NULL, NULL, NULL);
+	hHeader = CreateWindowW(L"edit", L"", WS_VISIBLE | WS_CHILD | WS_BORDER
+		| ES_MULTILINE, 630, 220, 400, 200, hWnd, NULL, NULL, NULL);
 
 	CreateWindowW(L"button", L"Clear", WS_VISIBLE | WS_CHILD | WS_BORDER,
-		630, 530, 100, 30, hWnd, (HMENU)CLEAR_FIELD, NULL, NULL);
+		630, 430, 100, 30, hWnd, (HMENU)CLEAR_FIELD, NULL, NULL);
 }

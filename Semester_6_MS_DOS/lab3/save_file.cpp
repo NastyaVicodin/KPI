@@ -1,3 +1,16 @@
+//################################################
+//
+//    #             
+//    #  #           Program: HeaderMaker
+//    #  #          
+//    ####   #       Author: Anastasia Lukyanenko
+//    #  ## ##      
+//    #  # # #       Created By HeaderMaker 
+//       #   #      
+//           #      
+//
+//################################################
+
 #include "header_maker.h"
 
 void	write_file(char *path)
@@ -8,9 +21,9 @@ void	write_file(char *path)
 
 	int _size = GetWindowTextLength(hFile_cont);
 	char *data = new char[_size + 1];
-	GetWindowText(hFile_cont, data, _size + 1);
-
-	fwrite(data, _size + 1, 1, file);
+	GetWindowText(hFile_cont, data, _size);
+	data[_size] = '\0';
+	fwrite(data, _size, 1, file);
 	fclose(file);
 }
 
